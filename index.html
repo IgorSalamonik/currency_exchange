@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" />
+    <title>currency__converter</title>
+    <meta property="og:image" content="EXCHANGE.png">
+    
+</head>
+
+<body class="body">
+    <!--  -->
+    <header class="header">
+        <h1>Calculate Exchange</h1>
+    </header>
+    <section class="container">
+        <!-- FORM -->
+        <form class="form js-form">
+            <fieldset class="form__fieldset">
+                <p>
+                    <label><span class="form__labelText" for="cashInput">Enter PLN value:</span>
+                        <input required class="form__field js-cashInput" id="cashInput" name="cashInput"
+                            placeholder="0.00" autofocus type="number" step="0.01" min="0.01">
+                    </label>
+                </p>
+                <p>
+                    <label for="currencySelection">
+                        <span class="form__labelText">
+                            Select currency:
+                        </span>
+                    </label>
+                    <!-- Currency selection -->
+                    <select required class="form__field js-currencyType" name="currencyType">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                        <option value="COP">COP</option>
+                    </select>
+                    </label>
+                </p>
+
+            </fieldset>
+            <!-- Calculate button-->
+            <button type="submit" class="button js-submit">Calculate</button>
+        </form>
+        <div class="outcome">
+<!-- Outcome value -->
+        <p>Converted value:<strong class="js-output">N/A</strong></p></div>
+    </section>
+</body>
+
+</html>
